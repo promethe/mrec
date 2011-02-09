@@ -1,0 +1,3 @@
+[submodule "extern/facebook-python-sdk"]
+	path = extern/facebook-python-sdk
+	url = git://github.com/facebook/python-sdk.git

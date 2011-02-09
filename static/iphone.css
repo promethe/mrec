@@ -1,0 +1,93 @@
+body {
+	background-color: #fafaf1;
+	font-family: Baskerville, Georgia, Times, serif;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+}
+
+div#header {
+	height: 55px;
+	
+	/* visuals */
+	background-color: #91a25e;
+	border-top: 5px solid #663025;
+	background-image: url(images/noise.png);
+	margin-bottom: 30px;
+}
+
+
+div#header h1 a {
+	display: block;
+	width: 320px;
+	margin: 0 auto;
+	color: #fafaf1;
+	text-shadow: #5c6e35 -1px 1px 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+
+	line-height: 50px;
+	font-size: 32px;
+	text-decoration: none;
+}
+
+div#status {
+
+}
+
+div#status .fail {
+	display: none
+}
+
+
+div#content {
+	max-width: 480px;
+	margin: 0 auto 0 auto;
+}
+
+div#content a {
+	color: #663025;
+}
+
+div#content ol {
+	list-style-type: decimal;
+	list-style-position: inside;
+	text-align: left;
+}
+
+div#content ol li {
+	margin: 10px 20px;
+}
+
+h1 a {
+	font-size: 33px;
+	line-height: 35px;
+	margin-bottom: 20px;
+	font-weight: normal;
+	font-style: normal;
+	position: relative;
+}
+
+p {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 23px;
+	margin-bottom: 25px;
+}
+
+div#footer {
+	border-top: 1px dotted #e7e7dd;
+	height: 80px;
+	padding-top: 5px;
+	background: url(images/leaf.png) no-repeat center 20px;
+	margin: 20px auto;
+}
+
+
+div#footer p {
+	color: #d6d5cd;
+	text-align: center;
+	margin-top: 0px;
+
+}

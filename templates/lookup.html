@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <p>The following objects are close by:</p>
+        <ol>
+        {% for location in nearest_locations %}
+            <li>{{ location.name }}<br/>
+                {{ location.location.street }}, {{ location.location.city }}</li>
+        {% endfor %}
+        </ol>
+        <p>Which one do you want to check in to?</p>
+        <form action="/checkin" method="post">
+          <div><textarea name="id" rows="1" cols="5"></textarea></div>
+          <div><input type="submit" value="Check in!"></div>
+        </form>
+    </body>
+</html>
