@@ -1,0 +1,18 @@
+Mobile Recommendations
+======================
+
+Kakapo
+------
+    Kakapo is the Google App Engine piece of software that will provide a web
+    front end and a storage facility for the Mobile recommendations.
+
+Kiwi
+----
+    Kiwi is the iPhone application that will be able to access the data stored
+    in kakapo, save the information in the database with the associated
+    ratings, and display everything in a proper UX interface.
+
+Naming
+------
+    All the names are derived from the New Zealand's endemic, flightless
+    birds. Both are close to extinction. And both are really incredibly cute.
