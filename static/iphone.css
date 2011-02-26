@@ -1,18 +1,37 @@
+/* @override http://localhost:8081/static/iphone.css */
+
 body {
-	background-color: #fafaf1;
 	font-family: Baskerville, Georgia, Times, serif;
 	font-size: 15px;
 	line-height: 20px;
 	text-align: center;
+	background: #fafaf1 url(images/noise.png) repeat-x 0 5px;
 }
 
 div#header {
 	height: 55px;
 	
 	/* visuals */
-	background-color: #91a25e;
+	/*background-color: #91a25e;*/
 	border-top: 5px solid #663025;
-	background-image: url(images/noise.png);
+	/* 	using background image styled purely with HTML5/CSS3 gradient
+		wouldn't using RGBA help with the background noise issue? */
+	
+	background-image: -webkit-gradient(
+					    linear,
+					    left top,
+					    left bottom,
+
+					    color-stop(0, rgba(160,190,100, 1)),
+					    color-stop(0.0198, rgba(160,190,100, 1)),
+
+					    color-stop(0.02, rgba(124,151,78, 0.95)),
+					    color-stop(0.98, rgba(102,126,47, 0.95)),
+
+					    color-stop(0.982, rgba(85,105,0, 1)),
+					    color-stop(1.00, rgba(85,105,0, 1))
+					);
+	/*background-image: url(images/noise.png);*/
 	margin-bottom: 30px;
 }
 
