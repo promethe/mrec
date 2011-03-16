@@ -1,112 +1,31 @@
 /* @override http://localhost:8081/static/iphone.css */
 
-body {
-	font-family: Baskerville, Georgia, Times, serif;
-	font-size: 15px;
-	line-height: 20px;
-	text-align: center;
-	background: #fafaf1 url(images/noise.png) repeat-x 0 5px;
+div#map_canvas {
+    height: 480px;
+    width: 100%;
 }
 
-div#header {
-	height: 55px;
+div#map_overlay {
+	height: 480px;
+	width: 100%;
 	
-	/* visuals */
-	/*background-color: #91a25e;*/
-	border-top: 5px solid #663025;
-	/* 	using background image styled purely with HTML5/CSS3 gradient
-		wouldn't using RGBA help with the background noise issue? */
-	
-	background-image: -webkit-gradient(
-					    linear,
-					    left top,
-					    left bottom,
-
-					    color-stop(0, rgba(160,190,100, 1)),
-					    color-stop(0.0198, rgba(160,190,100, 1)),
-
-					    color-stop(0.02, rgba(124,151,78, 0.95)),
-					    color-stop(0.98, rgba(102,126,47, 0.95)),
-
-					    color-stop(0.982, rgba(85,105,0, 1)),
-					    color-stop(1.00, rgba(85,105,0, 1))
-					);
-	/*background-image: url(images/noise.png);*/
-	margin-bottom: 30px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
 }
 
-
-div#header h1 a {
-	display: block;
-	width: 320px;
-	margin: 0 auto;
-	color: #fafaf1;
-	text-shadow: #5c6e35 -1px 1px 0;
-	font-family: Georgia, "Times New Roman", Times, serif;
-
-	line-height: 50px;
-	font-size: 32px;
-	text-decoration: none;
-}
-
-div#status {
-
-}
-
-div#status .fail {
-	display: none
-}
-
-
-div#content {
-	max-width: 480px;
-	margin: 0 auto 0 auto;
-}
-
-div#content a {
-	color: #663025;
-}
-
-div#content ol {
-	list-style-type: decimal;
-	list-style-position: inside;
-	text-align: left;
-}
-
-div#content ol li {
-	margin: 10px 20px;
-}
-
-h1 a {
-	font-size: 33px;
-	line-height: 35px;
-	margin-bottom: 20px;
-	font-weight: normal;
-	font-style: normal;
-	position: relative;
-}
-
-p {
-	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 23px;
-	margin-bottom: 25px;
-}
-
-div#footer {
-	border-top: 1px dotted #e7e7dd;
-	height: 80px;
-	padding-top: 5px;
-	background: url(images/leaf.png) no-repeat center 20px;
-	margin: 20px auto;
-}
-
-
-div#footer p {
-	color: #d6d5cd;
-	text-align: center;
-	margin-top: 0px;
-
+div#dialog_box {
+    width: 290px;
+    height: 120px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    position: absolute;
+    left: 15px;
+    top: 160px;
+    
+    background-color: white;
+    
+    z-index: 5000;
 }

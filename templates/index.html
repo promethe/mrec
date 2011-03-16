@@ -15,14 +15,49 @@
         <link rel="stylesheet" type="text/css" 
               href="/static/iphone.css" media="screen and (min-width: 481px)" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="/static/geo.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function(){
+                $("#buttoner").click(function() {
+                    var venue_name = $('input[name=venue_type]').val();
+                    var longitude = $('input[name=longitude]').val();
+                    var latitude = $('input[name=latitude]').val();
+                    
+                    var dataString = 'venue='+ venue_name + '&longitude=' + longitude + '&latitude=' + latitude;
+                    
+                    $.ajax({  
+                      type: "POST",  
+                      url: "/venues",  
+                      data: dataString,  
+                      success: function() {  
+                        alert("Yay, success!");
+                      }  
+                    });  
+                    
+                });
+            });
+        </script>
     </head>
     
-    <body>
-        <div id="header">
-        <h1><a href="/">kakapo</a></h1>
+    <body onload="initialize()">
+        <div id="map_canvas"></div>
+        <div id="map_overlay"></div>
+        <div id="dialog_box">
+            {% if current_user %}
+            Where are you right now?
+            <form action="/venues" method="post">
+                <div><input type="text" name="venue_type" placeholder="Venue type" /></div>
+                <div><input type="hidden" name="longitude" />
+                    <input type="hidden" name="latitude" /></div>
+                <!-- <div><input id="buttoner" type="submit" value="Search"></div> -->
+            </form>
+            <p id="buttoner">Find venues</p>
+            
+            {% endif %}
         </div>
-        <div id="content">
+        
+        <!-- <div id="content">
         {% if current_user %}
             <p>Thank you for logging in, {{ current_user.name }}!</p>
             <div id="status" class="fail">
@@ -34,15 +69,10 @@
                 </form>
                 <p><a href="venues">Find venues</a></p>
             </div>
-        {% endif %}
+        {% endif %} -->
         
         <fb:login-button autologoutlink="true" perms="publish_stream,offline_access,user_checkins,publish_checkins"></fb:login-button>
-        </div>
         
-        <div id="footer">
-            <p>the smooth flat rocks.</p>
-        </div>
-
         <!-- the kosher facebook js sdk -->
         <div id="fb-root"></div>
         <script>
